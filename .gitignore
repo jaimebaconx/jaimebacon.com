@@ -6,6 +6,7 @@
 
 # Node / Eleventy
 node_modules/
+_site/
 
 # OS junk
 .DS_Store
