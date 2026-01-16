@@ -1,0 +1,12 @@
+# Videos
+*.mov
+*.mp4
+*.avi
+*.mkv
+
+# Node / Eleventy
+node_modules/
+
+# OS junk
+.DS_Store
+Thumbs.db
