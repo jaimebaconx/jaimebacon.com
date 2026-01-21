@@ -1,7 +1,7 @@
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("CNAME");
 
   eleventyConfig.addFilter("date", (dateObj, format = "MMMM d, yyyy") => {
     if (!dateObj) return "";
