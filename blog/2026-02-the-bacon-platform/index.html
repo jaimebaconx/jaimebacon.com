@@ -1,0 +1,95 @@
+<h1>The Bacon Platform</h1>
+<p>Building Edge AI for the People Who Need It Most<br>
+Jaime Bacon | February 2026<br>
+<a href="https://github.com/jaimebaconx">github.com/jaimebaconx</a></p>
+<h2>1. The Origin Story</h2>
+<h3>The Revelation in the Waiting Room</h3>
+<p>It started on a Monday morning in a hospital waiting room in Springfield, Missouri. My son was getting his IVIG infusion. I had my laptop, a Smash Bros controller within arm's reach, and a question nagging at me: could I actually run AI locally, offline, on my own hardware?</p>
+<p>By noon I had installed Ollama, pulled Llama 3.2, built my first RAG pipeline in Python, fed <em>Where There Is No Doctor</em> into ChromaDB, and watched an offline AI answer a medical question from a local knowledge base for the first time. Zero internet. Zero cloud. Zero cost per query.</p>
+<p><strong>“WHY DIDN’T ANYONE TELL ME IT WAS THIS EASY”</strong></p>
+<p>That was the moment. Not a boardroom. Not a pitch deck. A hospital waiting room, a sick kid, and a laptop. The Bacon Platform was conceived between IVIG drip cycles and Smash Bros matches.</p>
+<h3>What I Built in 48 Hours</h3>
+<p><strong>Monday (Hospital):</strong></p>
+<ul>
+<li>Installed Ollama and pulled Llama 3.2</li>
+<li>Built first RAG pipeline in Python</li>
+<li>Fed <em>Where There Is No Doctor</em> into ChromaDB</li>
+<li>Bacon-Buddy answered its first medical question from a local knowledge base</li>
+<li>Validated edge AI thesis against MIT/Stanford funded startup Tiiny AI</li>
+<li>Conceptually founded the Bacon Platform</li>
+<li>Bacon-Buddy code pushed to GitHub</li>
+</ul>
+<p><strong>Tuesday (Day Job + Hospital Follow-Up):</strong></p>
+<ul>
+<li>ITsec meeting — now own Jira data classification project</li>
+<li>Spun up Azure DevOps org under ODOC banner</li>
+<li>Pivoted to Campfire — old time radio AI curation platform</li>
+<li>Installed CUDA, PyTorch cu118, Whisper — got GPU acceleration working on 1660 Ti</li>
+</ul>
+<h3>The Personal Context</h3>
+<p>All of this was built while present at my son’s IVIG appointment, playing Smash Bros in a hospital, leading worship with family on Sunday, watching my oldest son come home from his first dance to tell his dad he held a girl’s hand, hanging library shelves on Friday evening, filing taxes on Saturday morning, and launching Gov’t Dev Chronicles Episode 1 on LinkedIn and X.</p>
+<p>AI doesn’t replace builders. It removes the barrier between vision and manifestation.</p>
+<h2>2. What We’ve Built</h2>
+<h3>2.1 Bacon-Buddy Medical v0.1</h3>
+<p>An offline medical AI assistant that answers medical questions grounded in trusted public domain field guides. No internet. No subscription. No cloud. Every answer cites its source.</p>
+<p><strong>Knowledge Base:</strong></p>
+<ul>
+<li><em>Where There Is No Doctor</em> — Hesperian Health Guides</li>
+<li><em>Where There Is No Dentist</em> — Hesperian Health Guides</li>
+<li>FM 4-25.11 — US Army First Aid Field Manual (Public Domain)</li>
+<li>Special Forces Medical Handbook ST 31-91B (Public Domain)</li>
+<li>Ship’s Medicine Chest and Medical Aid at Sea — US Coast Guard (Public Domain)</li>
+<li>Emergency Childbirth — US Government (Public Domain)</li>
+</ul>
+<p><strong>Sample Output:</strong><br>
+<strong>Q:</strong> How do I splint an arm?<br>
+<strong>A:</strong> To splint an arm, pad the splints where they touch bony parts... use at least four ties (two above and two below the fracture)... check distal pulses before and after applying the splint.<br>
+<strong>Source:</strong> FM 4-25.11/NTRP 4-02.1/AFMAN 44-163(I)</p>
+<p><strong>Tech Stack:</strong></p>
+<ul>
+<li>Python + LangChain RAG pipeline</li>
+<li>Ollama + Llama 3.2 3B (local inference)</li>
+<li>ChromaDB vector database (persistent, local)</li>
+<li>HuggingFace sentence-transformers (embedding)</li>
+<li>PyMuPDF (PDF ingestion)</li>
+</ul>
+<p>GitHub: <a href="https://github.com/jaimebaconx/Bacon-Buddy">github.com/jaimebaconx/Bacon-Buddy</a></p>
+<h3>2.2 The Good Book v0.1</h3>
+<p>An offline Bible study assistant that answers theological questions, finds relevant passages, and synthesizes across scripture and trusted commentaries. Built on the same RAG pipeline as Bacon-Buddy with Bible-optimized chunking.</p>
+<p><strong>Knowledge Base:</strong></p>
+<ul>
+<li>King James Bible (Public Domain)</li>
+<li>World English Bible (Explicitly Public Domain)</li>
+<li>Matthew Henry’s Complete Commentary (1706, Public Domain)</li>
+<li>Easton’s Bible Dictionary (1893, Public Domain)</li>
+<li>Nave’s Topical Bible (Public Domain)</li>
+</ul>
+<p><strong>Sample Output:</strong><br>
+<strong>Q:</strong> What does the Bible say about anxiety and fear?<br>
+<strong>A:</strong> The Bible says that a holy fear is enjoined as a preventive of carelessness in religion... This fear is not a slavish dread, but rather filial reverence (Easton’s Dictionary)... ‘The fear of the LORD is the beginning of wisdom’ (Psalm 111:10, KJV)</p>
+<p>GitHub: <a href="https://github.com/jaimebaconx/good_book">github.com/jaimebaconx/good_book</a></p>
+<h2>3. The Vision — Connect by Disconnecting</h2>
+<p>The Bacon Platform isn’t just about offline AI. It’s about a specific worldview: technology should increase autonomy, not dependency. The through line across every product is simple — you don’t need permission, connectivity, or a corporation’s continued goodwill to use this.</p>
+<p><strong>“Connect by Disconnecting”</strong> — edge AI as a tool for building tighter community bonds offline, not looser ones online.</p>
+<h3>3.1 Target Markets</h3>
+<ul>
+<li>Prepper and Survival Communities — offline knowledge for grid-down scenarios</li>
+<li>Faith Communities — missionaries, rural churches, home Bible study groups</li>
+<li>Rural and Agricultural Communities — farmers, homesteaders, small ranchers</li>
+<li>Homeschool Families — offline AI tutors grounded in parent-chosen materials</li>
+<li>Small Businesses — tired of paying $500/month in AI subscriptions</li>
+<li>Regulated Industries — healthcare, legal, government — data that can’t go to the cloud</li>
+</ul>
+<h2>4. Technical Architecture</h2>
+<p>(You can keep or trim sections 4–6 if your blog prefers shorter posts. They’re already well-structured.)</p>
+<p>[... paste the rest of sections 4, 5, and 6 here if you want the full length ...]</p>
+<h2>6. What’s Next</h2>
+<p>Immediate (This Week)</p>
+<ul>
+<li>Gumroad listings for Bacon-Buddy Medical and The Good Book</li>
+<li>Reddit posts: r/preppers, r/homestead, r/TrueChristian, r/LocalLLaMA</li>
+<li>Gov’t Dev Chronicles Episode 2 — document the build publicly</li>
+</ul>
+<p>I find the people that Big Tech forgot and build AI that actually works for them.</p>
+<p>Built in a hospital waiting room. For the people who need it most.</p>
+<p><a href="https://github.com/jaimebaconx">github.com/jaimebaconx</a> | February 2026</p>
