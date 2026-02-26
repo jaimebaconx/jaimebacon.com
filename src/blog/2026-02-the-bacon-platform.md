@@ -13,6 +13,7 @@ tags:
   - prepper-tech
   - public-domain
 slug: the-bacon-platform
+layout: post.njk
 ---
 
 # The Bacon Platform  
