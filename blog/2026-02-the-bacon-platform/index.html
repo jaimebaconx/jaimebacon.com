@@ -98,16 +98,83 @@ Jaime Bacon | February 2026<br>
 <li>Regulated Industries — healthcare, legal, government — data that can’t go to the cloud</li>
 </ul>
 <h2>4. Technical Architecture</h2>
-<p>(You can keep or trim sections 4–6 if your blog prefers shorter posts. They’re already well-structured.)</p>
-<p>[... paste the rest of sections 4, 5, and 6 here if you want the full length ...]</p>
+<h3>4.1 The Core Stack</h3>
+<ul>
+<li>Python — core pipeline language</li>
+<li>Ollama — local LLM serving, GPU accelerated</li>
+<li>Llama 3.2 3B — base model, fast on consumer hardware</li>
+<li>LangChain — RAG pipeline orchestration</li>
+<li>ChromaDB — local vector database, persistent</li>
+<li>HuggingFace sentence-transformers — all-MiniLM-L6-v2 embedding model</li>
+<li>PyMuPDF — PDF and TXT document ingestion</li>
+<li>NVIDIA GTX 1660 Ti — 6GB VRAM, CUDA cu118, current dev hardware</li>
+</ul>
+<h3>4.2 The Module Architecture</h3>
+<p>Every Bacon Platform module follows the same pattern. This is intentional — the pipeline is proven, the swap is just the knowledge base and prompt.</p>
+<ul>
+<li>/model — pointer to Ollama model</li>
+<li>/knowledge — source documents (PDFs and TXTs)</li>
+<li>/data — pre-built ChromaDB vector index</li>
+<li>/src — pipeline code</li>
+<li>config — model selection, paths, prompt templates</li>
+</ul>
+<h3>4.3 Key Technical Decisions</h3>
+<ul>
+<li>RAG over fine-tuning (for now) — Gets to 80-85% quality without the compute cost. Fine-tuning comes after revenue funds better hardware.</li>
+<li>HuggingFace embeddings over Ollama embeddings — Frees VRAM for inference. all-MiniLM-L6-v2 is fast and accurate.</li>
+<li>Smaller chunk sizes for domain-specific content — 400-500 tokens vs 800 default. Keeps procedures intact, preserves verse boundaries.</li>
+<li>Strict RAG prompt engineering — 'Answer ONLY from context' eliminates hallucination. Source citations are mandatory.</li>
+<li>Public domain content only — Not a legal constraint, a product feature. Auditable sources build trust with our specific market.</li>
+</ul>
+<h2>5. Business Model &amp; Positioning</h2>
+<h3>5.1 The Core Value Proposition</h3>
+<p>Pay once. Yours forever. No internet. No subscription. No company reading your data.</p>
+<p>This isn’t competing with ChatGPT on capability. It’s competing on trust and ownership. That’s a different and arguably stronger value proposition for specific markets.</p>
+<h3>5.2 Revenue Streams</h3>
+<ul>
+<li>Consumer modules — $15-29 one-time purchase per module on Gumroad</li>
+<li>Bundle pricing — $49 for full suite when 3+ modules exist</li>
+<li>Annual update modules — $9/year optional, refreshed content. Recurring revenue without subscription psychology.</li>
+<li>Enterprise custom builds — $2,000-10,000 engagements for regulated industries</li>
+<li>LoRA fine-tuning as a service — $500-2,000 per engagement as skills develop</li>
+</ul>
+<h3>5.3 The Enterprise Opportunity</h3>
+<p>Most enterprise AI implementations fail. The reasons are predictable: too general, hallucination risk in regulated environments, data privacy concerns, compliance nightmares, change management failures. The failure rate is over 80% within the first six months.</p>
+<p>The pitch to enterprises that got burned by cloud AI:<br>
+“I can’t offer you GPT-infinity. But you’ve been down that road and it didn’t work. What I can offer is a custom, small AI tool for a specific task in your organization that actually works, meets your compliance requirements, and your data never leaves your premises.”</p>
+<p>Target verticals:</p>
+<ul>
+<li>Healthcare — HIPAA compliance, data never leaves the building</li>
+<li>Legal — attorney-client privilege, document analysis</li>
+<li>Government — ITAR, FISMA, classification requirements</li>
+<li>Finance — SEC, FINRA compliance, proprietary data</li>
+</ul>
+<h3>5.4 The Competitive Moat</h3>
+<p>The public domain content constraint is not a weakness — it’s the moat. Every answer has a verifiable source. Every source is documented. Every document is auditable. Large models are getting sued for training data. Bacon Platform answers come with a bibliography. For our specific markets, that’s gold.</p>
 <h2>6. What’s Next</h2>
-<p>Immediate (This Week)</p>
+<h3>6.1 Immediate (This Week)</h3>
 <ul>
 <li>Gumroad listings for Bacon-Buddy Medical and The Good Book</li>
 <li>Reddit posts: r/preppers, r/homestead, r/TrueChristian, r/LocalLLaMA</li>
 <li>Gov’t Dev Chronicles Episode 2 — document the build publicly</li>
 </ul>
-<p>I find the people that Big Tech forgot and build AI that actually works for them.</p>
+<h3>6.2 Short Term (Next 30 Days)</h3>
+<ul>
+<li>Streamlit UI for both products — makes them accessible to non-technical users</li>
+<li>Improved chunking — eliminate topic bleed-through in medical answers</li>
+<li>Simple installer — one script setup for non-technical users</li>
+<li>Bacon Studio v0.1 — local Roblox dev assistant for building with sons</li>
+</ul>
+<h3>6.3 Medium Term (90 Days)</h3>
+<ul>
+<li>First enterprise engagement — outreach through socials.</li>
+<li>LoRA fine-tuning exploration — domain-specific model adaptation</li>
+<li>Bacon Agent framework — overnight autonomous task completion</li>
+<li>Hardware upgrade — revenue funds better GPU</li>
+</ul>
+<h3>6.4 The Positioning Goal</h3>
+<p>Not ‘get a job at Anthropic.’ Get known as the person who spots gaps that aren’t on anyone’s radar and builds proof before anyone else realizes there’s a market. Build in public. Document everything. Ship real products. Let opportunities find the work.</p>
+<p><strong>“I find the people that Big Tech forgot and build AI that actually works for them.”</strong></p>
 <p>Built in a hospital waiting room. For the people who need it most.</p>
 <p><a href="https://github.com/jaimebaconx">github.com/jaimebaconx</a> | February 2026</p>
 
